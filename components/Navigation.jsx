@@ -1,24 +1,24 @@
-import Link from "next/link";
-import styles from "./Navigation.module.css";
+import Link from 'next/link'
+import styles from './Navigation.module.css'
 
 const links = [
   {
-    label: "Home",
-    route: "/",
+    label: 'Home',
+    route: '/'
   },
   {
-    label: "About",
-    route: "/about",
+    label: 'About',
+    route: '/about'
   },
   {
-    label:"Posts",
-    route: "/posts"
+    label: 'Posts',
+    route: '/posts'
   }
-];
+]
 
-export function Navigation() {
+export function Navigation () {
   return (
-    <header className ={styles.header}>
+    <header className={styles.header}>
       <nav>
         <ul className={styles.navigation}>
           {links.map(({ label, route }) => {
@@ -26,10 +26,10 @@ export function Navigation() {
               <li key={route}>
                 <Link href={route}>{label}</Link>
               </li>
-            );
+            )
           })}
         </ul>
       </nav>
     </header>
-  );
+  )
 }

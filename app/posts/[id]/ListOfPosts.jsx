@@ -1,7 +1,14 @@
 import { LikeButton } from "./LikeButton.jsx"
 
 const fetchPosts = () => {
-    return fetch('https://jsonplaceholder.typicode.com/posts')
+    //no-store for server-side // whitout this opt its static page
+    //return fetch('https://jsonplaceholder.typicode.com/posts', {cache: 'no-store'})
+    //Incremental static regeneration each 60secs
+    return fetch('https://jsonplaceholder.typicode.com/posts', {
+        next: {
+            revalidate: 60
+        }
+    })
     .then(res=> res.json())
 }
 
