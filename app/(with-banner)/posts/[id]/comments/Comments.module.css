@@ -1,0 +1,10 @@
+.list {
+    font-size: 10px;
+    background-color: #444;
+}
+
+.error {
+    background-color: red;
+    color: white;
+    padding: 2px;
+}

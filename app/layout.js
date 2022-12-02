@@ -1,22 +1,16 @@
 import '../styles/globals.css'
 import { Navigation } from "../components/Navigation";
+import {Space_Grotesk} from '@next/font/google'
 
-const links = [
-  {
-    label: "Home",
-    route: "/",
-  },
-  {
-    label: "About",
-    route: "/about",
-  },
-];
+const font = Space_Grotesk({
+  weight: ['400', '700']
+})
 
 export default function RootLayout({ children }) {
   return (
     <html>
       <head />
-      <body>
+      <body className={font.className}>
       <header>
         <Navigation />
       </header>
