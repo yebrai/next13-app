@@ -1,22 +1,24 @@
 import '../styles/globals.css'
-import { Navigation } from "../components/Navigation";
-import {Space_Grotesk} from '@next/font/google'
+import { Navigation } from '../components/Navigation'
+import { Space_Grotesk } from '@next/font/google'
+import Link from 'next/link'
 
 const font = Space_Grotesk({
   weight: ['400', '700'],
-  subsets:['latin']
+  subsets: ['latin']
 })
 
-export default function RootLayout({ children }) {
+export default function RootLayout ({ children }) {
   return (
     <html>
       <head />
       <body className={font.className}>
-      <header>
-        <Navigation />
-      </header>
+        <Link href='/signup'>Signup</Link>
+        <header>
+          <Navigation />
+        </header>
         {children}
       </body>
     </html>
-  );
+  )
 }

@@ -1,5 +1,11 @@
+import { Counter } from './Counter'
+
 export default function AboutPage () {
-    return (
-        <h1>This is my About</h1>
-    )
+  return (
+    <section>
+      <Counter />
+      <h1>This is the about!</h1>
+
+    </section>
+  )
 }
