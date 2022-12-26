@@ -1,5 +1,5 @@
 export default function Loading () {
-    return (
-        <p>Cargando Comments</p>
-    )
+  return (
+    <p>Cargando Comments</p>
+  )
 }
